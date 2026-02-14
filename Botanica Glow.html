@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botánica Glow | Skincare Minimalista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blanco-crema: #F5F5DC;
+            --verde-oliva: #556B2F;
+            --negro-azulado: #1A1E23;
+            --blanco-puro: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--blanco-crema);
+            color: var(--negro-azulado);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        /* --- Navegación --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            background-color: transparent;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+            fill: var(--verde-oliva);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--negro-azulado);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--verde-oliva);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1.5rem;
+            color: var(--negro-azulado);
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--verde-oliva);
+            font-style: italic;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--negro-azulado);
+            background: transparent;
+            color: var(--negro-azulado);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            transition: all 0.4s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--negro-azulado);
+            color: var(--blanco-crema);
+        }
+
+        /* --- Grid de Productos --- */
+        .products {
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-card {
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background-color: #e9e9d5; /* Placeholder */
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card span {
+            color: var(--verde-oliva);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            padding: 4rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(26, 30, 35, 0.1);
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            color: var(--verde-oliva);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">TIENDA</a></li>
+            <li><a href="#">NOSOTROS</a></li>
+        </ul>
+
+        <div class="logo-container">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M12,2L13.5,8.5L20,7L16,12L20,17L13.5,15.5L12,22L10.5,15.5L4,17L8,12L4,7L10.5,8.5L12,2Z" />
+            </svg>
+            <div class="logo-text">Botánica Glow</div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">CUENTA</a></li>
+            <li><a href="#">CARRITO (0)</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Piel que respira.</h1>
+        <p>Cuidado consciente con envases biodegradables y esencia botánica pura.</p>
+        <button class="btn">Explorar Colección</button>
+    </section>
+
+    <section class="products">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=800" alt="Serum Botánico">
+            </div>
+            <h3>Serum Regenerador</h3>
+            <span>Envase de Vidrio Ámbar - $45.00</span>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=800" alt="Crema Facial">
+            </div>
+            <h3>Crema Nutritiva</h3>
+            <span>Tapa de Madera Reciclada - $38.00</span>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9caab53?auto=format&fit=crop&q=80&w=800" alt="Limpiador">
+            </div>
+            <h3>Óleo Limpiador</h3>
+            <span>100% Biodegradable - $32.00</span>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 BOTÁNICA GLOW - BELLEZA CONSCIENTE.
+    </footer>
+
+</body>
+</html>
